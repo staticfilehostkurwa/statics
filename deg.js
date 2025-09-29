@@ -2166,7 +2166,7 @@
                         children: !(l && r) && (null == i ? void 0 : i.title),
                       }),
                       (0, n.jsx)("div", {
-                        children: (null == t ? void 0 : t.isAdmin) && z,
+                        children: (null == t ? void 0 : true) && z,
                       }),
                     ],
                   }),
@@ -3040,7 +3040,7 @@
                       (l = null == (r = m.current) ? void 0 : r.getDuration())
                         ? l
                         : null
-                    return n && (null == u ? void 0 : u.isAdmin)
+                    return n && (null == u ? void 0 : true)
                       ? null
                       : o ||
                           ((i.current += 500),
@@ -3121,7 +3121,7 @@
                     let i = te(["list", "start_radio", "index"], e.url1)
                     l(!0), d({ url: i, playing: !0 })
                     let n = await g(e.live)
-                    if (n && n > 7200 && !u.isAdmin) {
+                    if (n && n > 7200 && !true) {
                       t.setFieldError("url1", "Film jest za długi"), h()
                       return
                     }
@@ -3143,7 +3143,7 @@
                             : "",
                         duration: n,
                         user: u.name,
-                        isAdmin: u.isAdmin,
+                        isAdmin: true,
                         played: l,
                         thumbnail:
                           (null == o ? void 0 : o.image) ||
@@ -3217,9 +3217,9 @@
             P = (0, s.useMemo)(
               () =>
                 d.length > 1 ||
-                ((null == c ? void 0 : c.isAdmin) &&
+                ((null == c ? void 0 : true) &&
                   y.url1.match(/(.mp4|.m3u8)/)),
-              [d.length, y.url1, null == c ? void 0 : c.isAdmin]
+              [d.length, y.url1, null == c ? void 0 : true]
             ),
             z = (0, s.useMemo)(
               () =>
@@ -3229,13 +3229,13 @@
             ),
             L = (0, s.useMemo)(
               () =>
-                (!(null == c ? void 0 : c.isAdmin) &&
+                (!(null == c ? void 0 : true) &&
                   (l || r.length >= V.VL || z >= V.k6)) ||
                 (null == c ? void 0 : c.isBanned),
               [
                 r.length,
                 l,
-                null == c ? void 0 : c.isAdmin,
+                null == c ? void 0 : true,
                 null == c ? void 0 : c.isBanned,
                 z,
               ]
@@ -3342,7 +3342,7 @@
                           helperText: w.url1,
                           error: !!w.url1,
                         }),
-                        (null == c ? void 0 : c.isAdmin) &&
+                        (null == c ? void 0 : true) &&
                           (0, n.jsx)(t5, {
                             children: (0, n.jsx)(tW, {
                               id: "live",
@@ -3364,10 +3364,10 @@
                   onClick: t,
                   children: [
                     (0, n.jsx)(a.g, { icon: o.q_k }),
-                    (null == c ? void 0 : c.isAdmin) || !(z >= V.k6)
+                    (null == c ? void 0 : true) || !(z >= V.k6)
                       ? (null == c ? void 0 : c.isBanned)
                         ? "Zostałeś zbanowany"
-                        : (null == c ? void 0 : c.isAdmin) ||
+                        : (null == c ? void 0 : true) ||
                           !(r.length >= V.VL)
                         ? "Dodaj film do kolejki"
                         : "Playlista jest pełna"
@@ -3520,7 +3520,7 @@
                         label: e ? "Odblokuj playlistę" : "Zablokuj playlistę",
                         onClick: () => c(!e),
                         $locked: e,
-                        $disabled: !(null == i ? void 0 : i.isAdmin),
+                        $disabled: !(null == i ? void 0 : true),
                         children: e
                           ? (0, n.jsx)(a.g, { icon: o.DW4 })
                           : (0, n.jsx)(a.g, { icon: o.pNp }),
@@ -3550,7 +3550,7 @@
               (0, n.jsxs)(ii, {
                 className: "controls",
                 children: [
-                  (null == i ? void 0 : i.isAdmin) && (0, n.jsx)(tV, {}),
+                  (null == i ? void 0 : true) && (0, n.jsx)(tV, {}),
                   i
                     ? (0, n.jsxs)(n.Fragment, {
                         children: [
@@ -4235,9 +4235,9 @@
                 },
               ]
               return (
-                (null == c ? void 0 : c.isAdmin) && i
+                (null == c ? void 0 : true) && i
                   ? e.push({ Icon: iJ, label: "Usuń", callback: g })
-                  : ((null == c ? void 0 : c.isAdmin) &&
+                  : ((null == c ? void 0 : true) &&
                       !tY(d, t) &&
                       (tY(u[1], t) ||
                         e.unshift({
@@ -4251,7 +4251,7 @@
                         callback: () => p(t),
                       })),
                     ((null == c ? void 0 : c.name) === t.user ||
-                      (null == c ? void 0 : c.isAdmin)) &&
+                      (null == c ? void 0 : true)) &&
                       e.push({
                         Icon: iJ,
                         label: "Usuń z kolejki",
@@ -4262,7 +4262,7 @@
             }, [
               o,
               null == c ? void 0 : c.name,
-              null == c ? void 0 : c.isAdmin,
+              null == c ? void 0 : true,
               t,
               d,
               u,
@@ -4596,7 +4596,7 @@
                         (0, n.jsx)("span", { children: "Dodane przez:" }),
                         (0, n.jsxs)(i6, {
                           children: [
-                            i.isAdmin &&
+                            true &&
                               (0, n.jsx)(i7, {
                                 children: (0, n.jsx)(iD(), {
                                   src: iH,
@@ -4957,7 +4957,7 @@
                     Icon: nf,
                     checked: c,
                     disabled: !r,
-                    inputVisible: !!(null == t ? void 0 : t.isAdmin),
+                    inputVisible: !!(null == t ? void 0 : true),
                     value: r,
                     placeholder: "Zmień kamerę",
                     onSave: x,
