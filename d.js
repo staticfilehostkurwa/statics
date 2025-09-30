@@ -3231,12 +3231,12 @@
               () =>
                 (!(null == c ? void 0 : true) &&
                   (l || r.length >= V.VL || z >= V.k6)) ||
-                (null == c ? void 0 : c.isBanned),
+                (null == c ? void 0 : false),
               [
                 r.length,
                 l,
                 null == c ? void 0 : true,
-                null == c ? void 0 : c.isBanned,
+                null == c ? void 0 : false,
                 z,
               ]
             ),
@@ -3365,7 +3365,7 @@
                   children: [
                     (0, n.jsx)(a.g, { icon: o.q_k }),
                     (null == c ? void 0 : true) || !(z >= V.k6)
-                      ? (null == c ? void 0 : c.isBanned)
+                      ? (null == c ? void 0 : false)
                         ? "Zostałeś zbanowany"
                         : (null == c ? void 0 : true) ||
                           !(r.length >= V.VL)
