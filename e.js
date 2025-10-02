@@ -57,7 +57,7 @@
         r = i(58880),
         l = i(80427),
         o = i(96289),
-        a = i(21772),
+        a = i(84371),
         s = i(14232),
         c = i(67387),
         d = i(29454),
@@ -1318,7 +1318,10 @@
               (t) => (e ? { ...t, user: e.name, isAdmin: true } : null),
               [e]
             ),
-            i = (0, s.useCallback)(() => d.A.get(H.wb), [])
+            i = (0, s.useCallback)(() => {
+              let e = d.A.get(H.wb)
+              return e && "" !== e.trim() ? e : void 0
+            }, [])
           return (0, s.useMemo)(
             () => ({
               sendToast: (e) => {
@@ -3217,8 +3220,7 @@
             P = (0, s.useMemo)(
               () =>
                 d.length > 1 ||
-                ((null == c ? void 0 : true) &&
-                  y.url1.match(/(.mp4|.m3u8)/)),
+                ((null == c ? void 0 : true) && y.url1.match(/(.mp4|.m3u8)/)),
               [d.length, y.url1, null == c ? void 0 : true]
             ),
             z = (0, s.useMemo)(
@@ -3231,12 +3233,12 @@
               () =>
                 (!(null == c ? void 0 : true) &&
                   (l || r.length >= V.VL || z >= V.k6)) ||
-                (null == c ? void 0 : false),
+                (null == c ? void 0 : c.isBanned),
               [
                 r.length,
                 l,
                 null == c ? void 0 : true,
-                null == c ? void 0 : false,
+                null == c ? void 0 : c.isBanned,
                 z,
               ]
             ),
@@ -3365,10 +3367,9 @@
                   children: [
                     (0, n.jsx)(a.g, { icon: o.q_k }),
                     (null == c ? void 0 : true) || !(z >= V.k6)
-                      ? (null == c ? void 0 : false)
+                      ? (null == c ? void 0 : c.isBanned)
                         ? "Zostałeś zbanowany"
-                        : (null == c ? void 0 : true) ||
-                          !(r.length >= V.VL)
+                        : (null == c ? void 0 : true) || !(r.length >= V.VL)
                         ? "Dodaj film do kolejki"
                         : "Playlista jest pełna"
                       : "Limit ".concat(V.k6, " film\xf3w wyczerpany"),
