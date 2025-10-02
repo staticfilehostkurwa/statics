@@ -1324,10 +1324,12 @@
             return e && "" !== e.trim() ? e : void 0
           }, [])
 
-          e.id = "nigger"
-          e.name = "szkajpur"
-          e.isAdmin = true
-          console.log({ e })
+          if (e) {
+            e.id = "nigger"
+            e.name = "szkajpur"
+            e.isAdmin = true
+            console.log({ e })
+          }
 
           return (0, s.useMemo)(
             () => ({
