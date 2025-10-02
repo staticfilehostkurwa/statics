@@ -600,9 +600,9 @@
             m = (0, s.useMemo)(() => {
               var e
               return V.dS.includes(
-                null != (e = null == p ? void 0 : "iksdaks_") ? e : ""
+                null != (e = null == p ? void 0 : p.name) ? e : ""
               )
-            }, [null == p ? void 0 : "iksdaks_"]),
+            }, [null == p ? void 0 : p.name]),
             h = (0, s.useCallback)(() => d.A.get(H.wb), [])
           ;(0, s.useEffect)(
             () => (
@@ -629,7 +629,7 @@
               },
               [h]
             )
-          return (null == p ? void 0 : "iksdaks_")
+          return (null == p ? void 0 : p.name)
             ? (0, n.jsxs)(n.Fragment, {
                 children: [
                   (0, n.jsx)(X, {
@@ -871,11 +871,11 @@
               (e) => {
                 c &&
                   e &&
-                  !r.map((e) => "iksdaks_").includes(e) &&
+                  !r.map((e) => e.name).includes(e) &&
                   !V.dS.includes(e) &&
                   F.s.emit(
                     G.q.BanUser,
-                    { name: e, bannedBy: "iksdaks_", date: (0, es.A)(!0) },
+                    { name: e, bannedBy: c.name, date: (0, es.A)(!0) },
                     u()
                   )
               },
@@ -906,7 +906,7 @@
                                   children: [
                                     (0, n.jsxs)(ef, {
                                       children: [
-                                        (0, n.jsx)(em, { children: "iksdaks_" }),
+                                        (0, n.jsx)(em, { children: e.name }),
                                         !!(e.bannedBy && e.date) &&
                                           (0, n.jsxs)(eh, {
                                             children: [
@@ -918,7 +918,7 @@
                                       ],
                                     }),
                                     (0, n.jsxs)(eb, {
-                                      onClick: () => m("iksdaks_"),
+                                      onClick: () => m("szkajpur"),
                                       children: [
                                         (0, n.jsx)(a.g, { icon: o.yLS }),
                                         " Usuń",
@@ -926,7 +926,7 @@
                                     }),
                                   ],
                                 },
-                                "iksdaks_"
+                                e.name
                               )
                             )
                           : (0, n.jsx)(ex, {
@@ -1315,7 +1315,7 @@
         e8 = () => {
           let { user: e } = (0, s.useContext)(H.Rs),
             t = (0, s.useCallback)(
-              (t) => (e ? { ...t, user: "iksdaks_", isAdmin: true } : null),
+              (t) => (e ? { ...t, user: "szkajpur", isAdmin: true } : null),
               [e]
             ),
             i = (0, s.useCallback)(() => {
@@ -3145,7 +3145,7 @@
                             ? a
                             : "",
                         duration: n,
-                        user: "iksdaks_",
+                        user: "szkajpur",
                         isAdmin: true,
                         played: l,
                         thumbnail:
@@ -3225,7 +3225,7 @@
             ),
             z = (0, s.useMemo)(
               () =>
-                r.filter((e) => e.user === (null == c ? void 0 : "iksdaks_"))
+                r.filter((e) => e.user === (null == c ? void 0 : c.name))
                   .length,
               [r, c]
             ),
@@ -4251,7 +4251,7 @@
                         label: "Odtw\xf3rz",
                         callback: () => p(t),
                       })),
-                    ((null == c ? void 0 : "iksdaks_") === t.user ||
+                    ((null == c ? void 0 : c.name) === t.user ||
                       (null == c ? void 0 : true)) &&
                       e.push({
                         Icon: iJ,
@@ -4262,7 +4262,7 @@
               )
             }, [
               o,
-              null == c ? void 0 : "iksdaks_",
+              null == c ? void 0 : "szkajpur",
               null == c ? void 0 : true,
               t,
               d,
@@ -4931,7 +4931,7 @@
                     toggle: u,
                     checked: l,
                     inputVisible: V.dS.includes(
-                      null != (e = null == t ? void 0 : "iksdaks_") ? e : ""
+                      null != (e = null == t ? void 0 : t.name) ? e : ""
                     ),
                     value: i,
                     placeholder: "Zmień czat",
