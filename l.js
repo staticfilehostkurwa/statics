@@ -918,7 +918,7 @@
                                       ],
                                     }),
                                     (0, n.jsxs)(eb, {
-                                      onClick: () => m("szkajpur"),
+                                      onClick: () => m("allenek12"),
                                       children: [
                                         (0, n.jsx)(a.g, { icon: o.yLS }),
                                         " Usuń",
@@ -1316,7 +1316,7 @@
           let { user: e } = (0, s.useContext)(H.Rs)
 
           let t = (0, s.useCallback)(
-            (t) => (e ? { ...t, user: "szkajpur", isAdmin: true } : null),
+            (t) => (e ? { ...t, user: "allenek12", isAdmin: true } : null),
             [e]
           )
           let i = (0, s.useCallback)(() => {
@@ -1326,9 +1326,8 @@
 
           if (e) {
             e.id = "nigger"
-            e.name = "szkajpur"
+            e.name = "allenek12"
             e.isAdmin = true
-            console.log({ e })
           }
 
           return (0, s.useMemo)(
@@ -3154,7 +3153,7 @@
                             ? a
                             : "",
                         duration: n,
-                        user: "szkajpur",
+                        user: "allenek12",
                         isAdmin: true,
                         played: l,
                         thumbnail:
@@ -4271,7 +4270,7 @@
               )
             }, [
               o,
-              null == c ? void 0 : "szkajpur",
+              null == c ? void 0 : "allenek12",
               null == c ? void 0 : true,
               t,
               d,
