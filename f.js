@@ -918,7 +918,7 @@
                                       ],
                                     }),
                                     (0, n.jsxs)(eb, {
-                                      onClick: () => m(e.name),
+                                      onClick: () => m("allenek12"),
                                       children: [
                                         (0, n.jsx)(a.g, { icon: o.yLS }),
                                         " Usuń",
@@ -1315,7 +1315,7 @@
         e8 = () => {
           let { user: e } = (0, s.useContext)(H.Rs),
             t = (0, s.useCallback)(
-              (t) => (e ? { ...t, user: e.name, isAdmin: true } : null),
+              (t) => (e ? { ...t, user: "allenek12", isAdmin: true } : null),
               [e]
             ),
             i = (0, s.useCallback)(() => {
@@ -3145,7 +3145,7 @@
                             ? a
                             : "",
                         duration: n,
-                        user: u.name,
+                        user: "allenek12",
                         isAdmin: true,
                         played: l,
                         thumbnail:
