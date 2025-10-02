@@ -1313,15 +1313,19 @@
       let e3 = "player-volume-level",
         e6 = () => (0, e4.$)("localStorage", e3) || 0.5,
         e8 = () => {
-          let { user: e } = (0, s.useContext)(H.Rs),
-            t = (0, s.useCallback)(
-              (t) => (e ? { ...t, user: "szkajpur", isAdmin: true } : null),
-              [e]
-            ),
-            i = (0, s.useCallback)(() => {
-              let e = d.A.get(H.wb)
-              return e && "" !== e.trim() ? e : void 0
-            }, [])
+          let { user: e } = (0, s.useContext)(H.Rs)
+
+          let t = (0, s.useCallback)(
+            (t) => (e ? { ...t, user: "szkajpur", isAdmin: true } : null),
+            [e]
+          )
+          let i = (0, s.useCallback)(() => {
+            let e = d.A.get(H.wb)
+            return e && "" !== e.trim() ? e : void 0
+          }, [])
+
+          console.log({ e, t, i })
+
           return (0, s.useMemo)(
             () => ({
               sendToast: (e) => {
