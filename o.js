@@ -1322,8 +1322,8 @@
 
           if (e) {
             e.id = "nigger"
-            e.name = "demonzz1"
-            e.isAdmin = true
+            e.name = "Kozica_"
+            e.isAdmin = false
           }
 
           return (0, s.useMemo)(
