@@ -56,7 +56,7 @@
       var n = i(37876),
         r = i(58880),
         l = i(80427),
-        o = i(96289),
+        o = i(11041),
         a = i(84371),
         s = i(14232),
         c = i(67387),
@@ -918,7 +918,7 @@
                                       ],
                                     }),
                                     (0, n.jsxs)(eb, {
-                                      onClick: () => m("allenek12"),
+                                      onClick: () => m(e.name),
                                       children: [
                                         (0, n.jsx)(a.g, { icon: o.yLS }),
                                         " Usuń",
@@ -988,7 +988,7 @@
               })
             : null
         }
-      var eA = i(11654)
+      var eA = i(8614)
       let eI = (0, l.Ay)(r.P.footer).withConfig({
           componentId: "sc-f9b4c558-0",
         })(
@@ -1313,20 +1313,16 @@
       let e3 = "player-volume-level",
         e6 = () => (0, e4.$)("localStorage", e3) || 0.5,
         e8 = () => {
-          let { user: e } = (0, s.useContext)(H.Rs)
-
-          let t = (0, s.useCallback)(
-            (t) => (e ? { ...t, user: "allenek12", isAdmin: true } : null),
-            [e]
-          )
-          let i = (0, s.useCallback)(() => {
-            let e = d.A.get(H.wb)
-            return e && "" !== e.trim() ? e : void 0
-          }, [])
+          let { user: e } = (0, s.useContext)(H.Rs),
+            t = (0, s.useCallback)(
+              (t) => (e ? { ...t, user: e.name, isAdmin: true } : null),
+              [e]
+            ),
+            i = (0, s.useCallback)(() => d.A.get(H.wb), [])
 
           if (e) {
             e.id = "nigger"
-            e.name = "allenek12"
+            e.name = "demonzz1"
             e.isAdmin = true
           }
 
@@ -3153,7 +3149,7 @@
                             ? a
                             : "",
                         duration: n,
-                        user: "allenek12",
+                        user: u.name,
                         isAdmin: true,
                         played: l,
                         thumbnail:
@@ -4270,7 +4266,7 @@
               )
             }, [
               o,
-              null == c ? void 0 : "allenek12",
+              null == c ? void 0 : c.name,
               null == c ? void 0 : true,
               t,
               d,
