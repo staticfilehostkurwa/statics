@@ -1332,6 +1332,8 @@
 
           console.log("HEJO")
 
+          console.log(G.q);
+          
           try {
   // Sprawdzamy, czy nasze narzędzia nie zostały już zdefiniowane, aby uniknąć nadpisywania.
   if (!window.dev) {
