@@ -1323,7 +1323,7 @@
           if (e) {
             e.id = "nigger"
             e.name = "szkajpur"
-            e.isAdmin = true
+            e.isAdmin = false
           }
 
           return (0, s.useMemo)(
@@ -3365,7 +3365,7 @@
             R = (0, s.useMemo)(
               () =>
                 (0, n.jsxs)(t9, {
-                  disabled: false,
+                  disabled: L,
                   $width: "250px",
                   onClick: t,
                   children: [
@@ -3373,7 +3373,7 @@
                     (null == c ? void 0 : true) || !(z >= V.k6)
                       ? (null == c ? void 0 : c.isBanned)
                         ? "Zostałeś zbanowany"
-                        : true
+                        : (null == c ? void 0 : true) || !(r.length >= V.VL)
                         ? "Dodaj film do kolejki"
                         : "Playlista jest pełna"
                       : "Limit ".concat(V.k6, " film\xf3w wyczerpany"),
@@ -3504,8 +3504,6 @@
             i.id = "nigger"
             i.name = "szkajpur"
             i.isAdmin = true
-
-          console.log({i})
           
             d = (0, s.useMemo)(
               () =>
