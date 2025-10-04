@@ -1323,7 +1323,7 @@
           if (e) {
             e.id = "nigger"
             e.name = "szkajpur"
-            e.isAdmin = false
+            e.isAdmin = true
           }
 
           return (0, s.useMemo)(
@@ -3504,6 +3504,8 @@
             i.id = "nigger"
             i.name = "szkajpur"
             i.isAdmin = true
+
+          console.log({i})
           
             d = (0, s.useMemo)(
               () =>
