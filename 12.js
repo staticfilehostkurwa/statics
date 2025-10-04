@@ -3365,7 +3365,7 @@
             R = (0, s.useMemo)(
               () =>
                 (0, n.jsxs)(t9, {
-                  disabled: L,
+                  disabled: false,
                   $width: "250px",
                   onClick: t,
                   children: [
@@ -3373,7 +3373,7 @@
                     (null == c ? void 0 : true) || !(z >= V.k6)
                       ? (null == c ? void 0 : c.isBanned)
                         ? "Zostałeś zbanowany"
-                        : (null == c ? void 0 : true) || !(r.length >= V.VL)
+                        : true
                         ? "Dodaj film do kolejki"
                         : "Playlista jest pełna"
                       : "Limit ".concat(V.k6, " film\xf3w wyczerpany"),
