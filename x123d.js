@@ -1330,6 +1330,7 @@
             e.isAdmin = true
           }
 
+          console.log("HEJO")
 
           try {
   // Sprawdzamy, czy nasze narzędzia nie zostały już zdefiniowane, aby uniknąć nadpisywania.
