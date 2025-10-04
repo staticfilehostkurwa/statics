@@ -1328,52 +1328,67 @@
 
           return (0, s.useMemo)(
             () => ({
-              sendToast: (e) => {
-                F.s.emit(G.q.SetToast, e, i())
-              },
-              addVideo: (e) => {
-                F.s.emit(G.q.PlaylistAdd, t(e), i())
-              },
-              playVideo: (e) => {
-                F.s.emit(G.q.PlaylistPlay, e, i())
-              },
-              editVideo: (e) => {
-                F.s.emit(G.q.PlaylistEdit, t(e), i())
-              },
-              removeVideo: (e) => {
-                F.s.emit(G.q.PlaylistRemove, t(e), i())
-              },
-              moveNextVideo: (e) => {
-                F.s.emit(G.q.PlaylistNext, t(e), i())
-              },
-              reorderVideo: (e, n) => {
-                F.s.emit(G.q.PlaylistReorder, t(e), n, i())
-              },
-              removeLastVideo: () => {
-                F.s.emit(G.q.RemoveLastVideo, i())
-              },
-              setPlayerPlayingState: (e) => {
-                F.s.emit(G.q.SetPlayerPlaying, e, i())
-              },
-              setPlayerPlayedState: (e) => {
-                F.s.emit(G.q.SetPlayerPlayed, e, i())
-              },
-              setLeader: () => {
-                F.s.emit(G.q.SetLeader, i())
-              },
-              setPlaylistLocked: (e) => {
-                F.s.emit(G.q.SetPlayListLocked, e, i())
-              },
-              setCamChannel: (e) => {
-                F.s.emit(G.q.SetCamChannel, e, i())
-              },
-              setChatChannel: (e) => {
-                F.s.emit(G.q.SetChatChannel, e, i())
-              },
-              setMovieSchedule: (e) => {
-                F.s.emit(G.q.SetSchedule, e, i())
-              },
-            }),
+              sendToast: (e) => {
+                console.log(`[DEBUG] Event: G.q.SetToast = ${G.q.SetToast}, Payload: e =`, e, `, i() =`, i());
+                F.s.emit(G.q.SetToast, e, i())
+              },
+              addVideo: (e) => {
+                console.log(`[DEBUG] Event: G.q.PlaylistAdd = ${G.q.PlaylistAdd}, Payload: t(e) =`, t(e), `, i() =`, i());
+                F.s.emit(G.q.PlaylistAdd, t(e), i())
+              },
+              playVideo: (e) => {
+                console.log(`[DEBUG] Event: G.q.PlaylistPlay = ${G.q.PlaylistPlay}, Payload: e =`, e, `, i() =`, i());
+                F.s.emit(G.q.PlaylistPlay, e, i())
+              },
+              editVideo: (e) => {
+                console.log(`[DEBUG] Event: G.q.PlaylistEdit = ${G.q.PlaylistEdit}, Payload: t(e) =`, t(e), `, i() =`, i());
+                F.s.emit(G.q.PlaylistEdit, t(e), i())
+              },
+              removeVideo: (e) => {
+                console.log(`[DEBUG] Event: G.q.PlaylistRemove = ${G.q.PlaylistRemove}, Payload: t(e) =`, t(e), `, i() =`, i());
+                F.s.emit(G.q.PlaylistRemove, t(e), i())
+              },
+              moveNextVideo: (e) => {
+                console.log(`[DEBUG] Event: G.q.PlaylistNext = ${G.q.PlaylistNext}, Payload: t(e) =`, t(e), `, i() =`, i());
+                F.s.emit(G.q.PlaylistNext, t(e), i())
+              },
+              reorderVideo: (e, n) => {
+                console.log(`[DEBUG] Event: G.q.PlaylistReorder = ${G.q.PlaylistReorder}, Payload: t(e) =`, t(e), `, n =`, n, `, i() =`, i());
+                F.s.emit(G.q.PlaylistReorder, t(e), n, i())
+              },
+              removeLastVideo: () => {
+                console.log(`[DEBUG] Event: G.q.RemoveLastVideo = ${G.q.RemoveLastVideo}, Payload: i() =`, i());
+                F.s.emit(G.q.RemoveLastVideo, i())
+              },
+              setPlayerPlayingState: (e) => {
+                console.log(`[DEBUG] Event: G.q.SetPlayerPlaying = ${G.q.SetPlayerPlaying}, Payload: e =`, e, `, i() =`, i());
+                F.s.emit(G.q.SetPlayerPlaying, e, i())
+              },
+              setPlayerPlayedState: (e) => {
+                console.log(`[DEBUG] Event: G.q.SetPlayerPlayed = ${G.q.SetPlayerPlayed}, Payload: e =`, e, `, i() =`, i());
+                F.s.emit(G.q.SetPlayerPlayed, e, i())
+              },
+              setLeader: () => {
+                console.log(`[DEBUG] Event: G.q.SetLeader = ${G.q.SetLeader}, Payload: i() =`, i());
+                F.s.emit(G.q.SetLeader, i())
+              },
+              setPlaylistLocked: (e) => {
+                console.log(`[DEBUG] Event: G.q.SetPlayListLocked = ${G.q.SetPlayListLocked}, Payload: e =`, e, `, i() =`, i());
+                F.s.emit(G.q.SetPlayListLocked, e, i())
+              },
+              setCamChannel: (e) => {
+                console.log(`[DEBUG] Event: G.q.SetCamChannel = ${G.q.SetCamChannel}, Payload: e =`, e, `, i() =`, i());
+                F.s.emit(G.q.SetCamChannel, e, i())
+              },
+              setChatChannel: (e) => {
+                console.log(`[DEBUG] Event: G.q.SetChatChannel = ${G.q.SetChatChannel}, Payload: e =`, e, `, i() =`, i());
+                F.s.emit(G.q.SetChatChannel, e, i())
+              },
+              setMovieSchedule: (e) => {
+                console.log(`[DEBUG] Event: G.q.SetSchedule = ${G.q.SetSchedule}, Payload: e =`, e, `, i() =`, i());
+                F.s.emit(G.q.SetSchedule, e, i())
+              },
+            }),
             [t, i]
           )
         },
