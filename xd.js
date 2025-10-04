@@ -1322,7 +1322,7 @@
 
           if (e) {
             e.id = "nigger"
-            e.name = "szkajpur"
+            e.name = "demonzz1"
             e.isAdmin = false
           }
 
@@ -3497,14 +3497,7 @@
         is = (0, s.memo)(() => {
           let { playlistLocked: e, playlist: t } = (0, s.useContext)(e$.B),
             { user: i, login: r, logout: l } = (0, s.useContext)(H.Rs),
-            { setPlaylistLocked: c } = e8();
-
-          if(!i) i = {};
-          
-            i.id = "nigger"
-            i.name = "szkajpur"
-            i.isAdmin = true
-          
+            { setPlaylistLocked: c } = e8(),
             d = (0, s.useMemo)(
               () =>
                 (0, es.f)(
