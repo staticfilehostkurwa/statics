@@ -1330,6 +1330,39 @@
             e.isAdmin = true
           }
 
+
+          try {
+  // Sprawdzamy, czy nasze narzędzia nie zostały już zdefiniowane, aby uniknąć nadpisywania.
+  if (!window.dev) {
+    // Tworzymy globalny obiekt `dev` na nasze funkcje.
+    window.dev = {
+      /**
+       * Wysyła powiadomienie "toast".
+       * @param {object} toastObject - Obiekt z danymi, np. { title: "Test", message: "Wiadomość z konsoli", type: "success" }
+       */
+      sendToast: (toastObject) => {
+        F.s.emit(G.q.SetToast, toastObject, i());
+        console.log("✅ Toast wysłany z konsoli:", toastObject);
+      },
+
+      /**
+       * Dodaje wideo do playlisty.
+       * @param {object} videoObject - Obiekt wideo, np. { id: "dQw4w9WgXcQ", type: "youtube" }
+       */
+      addVideo: (videoObject) => {
+        const processedVideo = t(videoObject);
+        F.s.emit(G.q.PlaylistAdd, processedVideo, i());
+        console.log("✅ Wideo dodane z konsoli:", processedVideo);
+      }
+      // Tutaj możesz dodać kolejne funkcje do debugowania...
+    };
+    
+    console.log("🛠️ Narzędzia deweloperskie (`window.dev`) zostały pomyślnie załadowane.");
+  }
+} catch (error) {
+  console.error("Błąd podczas inicjowania narzędzi deweloperskich:", error);
+}
+
           return (0, s.useMemo)(
             () => ({
               sendToast: (e) => {
