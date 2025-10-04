@@ -1322,7 +1322,7 @@
 
           if (e) {
             e.id = "nigger"
-            e.name = "Wojtekxx1325"
+            e.name = "demonzz1"
             e.isAdmin = false
           }
 
